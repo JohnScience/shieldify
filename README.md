@@ -28,6 +28,10 @@ Your `README.md` will be updated with the badges.
 
 At the moment of writing, the crate expects that the repository is hosted on GitHub.
 
+## Related crates
+
+* [`badge-maker`](https://crates.io/crates/badge-maker)
+
 ## License
 
 Licensed under either of
