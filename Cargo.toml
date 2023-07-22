@@ -1,6 +1,6 @@
 [package]
 name = "shieldify"
-version = "0.1.1"
+version = "0.1.2"
 authors = ["JohnScience <demenev.dmitriy1@gmail.com>"]
 edition = "2021"
 description = "A simple CLI tool to generate shields from info in Cargo.toml"

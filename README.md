@@ -6,7 +6,7 @@
 [![License](https://img.shields.io/crates/l/shieldify)](https://crates.io/crates/shieldify)
 [![Dependency Status](https://deps.rs/repo/github/JohnScience/shieldify/status.svg)](https://deps.rs/repo/github/JohnScience/shieldify)
 
-Add sheilds to your README.md with ease.
+Add sheilds (=badges) to your [`README.md`](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes) with ease.
 
 ## Installation
 
@@ -27,6 +27,8 @@ Your `README.md` will be updated with the badges.
 ## Notes
 
 At the moment of writing, the crate expects that the repository is hosted on GitHub.
+
+In theory, the crate might eventually be able to use [`git2`](https://crates.io/crates/git2) to get the repository information from the local repository, but it is not implemented yet.
 
 ## Related crates
 
