@@ -8,6 +8,26 @@
 
 Add sheilds to your README.md with ease.
 
+## Installation
+
+```console
+cargo install shieldify
+```
+
+## Usage
+
+Add [`repository` field](https://doc.rust-lang.org/cargo/reference/manifest.html#the-repository-field) to your `Cargo.toml` and run in the crate root:
+
+```console
+shieldify
+```
+
+Your `README.md` will be updated with the badges.
+
+## Notes
+
+At the moment of writing, the crate expects that the repository is hosted on GitHub.
+
 ## License
 
 Licensed under either of
