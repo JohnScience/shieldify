@@ -93,6 +93,9 @@ fn main() -> Result<()> {
     let cur_dir = std::env::current_dir().unwrap();
     let manifest = cur_dir.join("Cargo.toml");
     let readme = cur_dir.join("README.md");
+    let lib_rs = cur_dir.join("src").join("lib.rs");
+
+    let has_lib = lib_rs.exists();
 
     if !manifest.exists() {
         let err_msg = format!(
@@ -164,15 +167,21 @@ fn main() -> Result<()> {
         }
     };
 
-    let shields = format!(
+    let mut shields = format!(
         "\n\n\
         [![Crates.io](https://img.shields.io/crates/v/{crate_name})](https://crates.io/crates/{crate_name})\n\
-        [![Downloads](https://img.shields.io/crates/d/{crate_name}.svg)](https://crates.io/crates/{crate_name})\n\
-        [![Documentation](https://docs.rs/{crate_name}/badge.svg)](https://docs.rs/{crate_name})\n\
-        [![License](https://img.shields.io/crates/l/{crate_name})](https://crates.io/crates/{crate_name})\n\
+        [![Downloads](https://img.shields.io/crates/d/{crate_name}.svg)](https://crates.io/crates/{crate_name})\n"
+    );
+
+    if has_lib {
+        shields.push_str(&format!("[![Documentation](https://docs.rs/{crate_name}/badge.svg)](https://docs.rs/{crate_name})\n"));
+    }
+
+    shields.push_str(&format!(
+        "[![License](https://img.shields.io/crates/l/{crate_name})](https://crates.io/crates/{crate_name})\n\
         [![Dependency Status](https://deps.rs/repo/{provider}/{user}/{repo}/status.svg)](https://deps.rs/repo/github/{user}/{repo})\
         "
-    );
+    ));
 
     readme_contents.insert_str(offset, &shields);
 

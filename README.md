@@ -2,7 +2,6 @@
 
 [![Crates.io](https://img.shields.io/crates/v/shieldify)](https://crates.io/crates/shieldify)
 [![Downloads](https://img.shields.io/crates/d/shieldify.svg)](https://crates.io/crates/shieldify)
-[![Documentation](https://docs.rs/shieldify/badge.svg)](https://docs.rs/shieldify)
 [![License](https://img.shields.io/crates/l/shieldify)](https://crates.io/crates/shieldify)
 [![Dependency Status](https://deps.rs/repo/github/JohnScience/shieldify/status.svg)](https://deps.rs/repo/github/JohnScience/shieldify)
 
@@ -25,6 +24,8 @@ shieldify
 Your `README.md` will be updated with the badges.
 
 ## Notes
+
+For crates with `src/lib.rs`, it will also add a badge for the documentation.
 
 At the moment of writing, the crate expects that the repository is hosted on GitHub.
 
