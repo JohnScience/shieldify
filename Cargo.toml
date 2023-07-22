@@ -1,10 +1,16 @@
 [package]
 name = "shieldify"
 version = "0.1.0"
+authors = ["JohnScience <demenev.dmitriy1@gmail.com>"]
 edition = "2021"
+description = "A simple CLI tool to generate shields from info in Cargo.toml"
+documentation = "docs.rs/shieldify"
+readme = "README.md"
+homepage = "https://github.com/JohnScience/shieldify"
 repository = "https://github.com/JohnScience/shieldify"
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+license = "MIT OR Apache-2.0"
+keywords = ["cargo", "shields", "badges", "cli"]
+categories = ["development-tools", "command-line-utilities"] # https://crates.io/category_slugs
 
 [dependencies]
 anyhow = "1.0.72"
